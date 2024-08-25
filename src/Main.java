@@ -11,10 +11,23 @@ public class Main {
 
         // TODO: Itere sobre os serviços contratados
         for (String servico : servicosContratados) {
+            servico = servico.trim().toLowerCase();
+
+            switch (servico) {
+                case "movel":
+                    movelContratado = true;
+                    break;
+                case "banda larga":
+                    bandaLargaContratada = true;
+                    break;
+                case "tv":
+                    tvContratada = true;
+                    break;
+            }
         }
 
         // TODO: Verifique se todos os serviços foram contratados
-        if () {
+        if (movelContratado && bandaLargaContratada && tvContratada) {
             return "Combo Completo";
         } else {
             return "Combo Incompleto";
